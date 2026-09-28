@@ -1,0 +1,140 @@
+/* Font Faces */
+@font-face {
+  font-family: "Karla";
+  src: url("../assets/fonts/Karla-Regular.ttf") format(truetype);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url("../assets/fonts/Karla-Bold.ttf") format(truetype);
+  font-weight: 700;
+}
+
+/* root */
+:root {
+  --Teal-500: hsl(179, 62%, 43%);
+  --Green-400: hsl(71, 73%, 54%);
+  --Teal-100: hsl(204, 43%, 93%);
+  --gray-500: hsl(218, 22%, 67%);
+  --white: white;
+  --article-padding: 2em;
+}
+
+/* CSS Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* styles */
+body {
+  font-family: "Karla";
+  min-height: 100vh;
+  display: grid;
+ 
+}
+
+article {
+  padding: var(--article-padding);
+}
+
+h1 {
+  color: var(--Teal-500);
+  margin-bottom: 0.8em;
+}
+
+h2 {
+}
+
+.article-1 .sub {
+  color: var(--Green-400);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.article-1 p {
+  color: var(--gray-500);
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
+.article-2 {
+  background-color: var(--Teal-500);
+  color: var(--white);
+}
+
+.article-2 h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1em;
+}
+
+.article-2 .sub {
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+.article-2 .sub span {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.article-2 p {
+  margin-bottom: 1em;
+}
+.article-2 button {
+  background-color: var(--Green-400);
+  border: none;
+  font-size: 1rem;
+  padding: 1em;
+  width: 100%;
+  border-radius: 4px;
+  color: white;
+  font-weight: 700;
+  box-shadow: 2px 2px 10px hsl(0, 0%, 0%, 0.2);
+}
+
+.article-3 {
+  background-color: var(--Teal-500);
+  opacity: 0.8;
+  padding: var(--article-padding);
+  color: var(--white);
+  display: block;
+}
+.article-3 h2 {
+  margin-bottom: 1em;
+}
+.article-3 p {
+  color: var(--Teal-100);
+}
+
+@media (min-width: 600px) {
+  body {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .article-1 {
+    grid-column: 1 / 3;
+    padding: 3em;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+     font-size: 1.5rem;
+  }
+  .article-1 .sub {
+    font-size: 1.5rem;
+  }
+  .article-1 p {
+    font-size: 1.2rem;
+  }
+  .article-2 h2 {
+    font-size: 1.5rem;
+  }
+  .article-2 p {
+    margin-bottom: 3em;
+  }
+}
